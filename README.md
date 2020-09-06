@@ -42,15 +42,15 @@ class DoctrineCollectionsAssertsTest extends TestCase
     }
 
     public function testAssertWholeCollectionSatisfiesPredicate(): void
-    {
-        $collection = new ArrayCollection([0, 8, 5, 3]);
-
-        self::assertCollectionItemExistsThatSatisfiesPredicate(
-            $collection,
-            function (int $key, int $value) {
-                return $value > 0;
-            }
-        );
-    }
+        {
+            $collection = new ArrayCollection([0, 8, 5, 3]);
+    
+            self::assertWholeCollectionSatisfiesPredicate(
+                $collection,
+                function (int $key, int $value) {
+                    return $value >= 0;
+                }
+            );
+        }
 }
 ```
