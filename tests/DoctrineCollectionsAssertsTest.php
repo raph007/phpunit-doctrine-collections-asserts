@@ -42,10 +42,10 @@ class DoctrineCollectionsAssertsTest extends TestCase
     {
         $collection = new ArrayCollection([0, 8, 5, 3]);
 
-        self::assertCollectionItemExistsThatSatisfiesPredicate(
+        self::assertWholeCollectionSatisfiesPredicate(
             $collection,
             function (int $key, int $value) {
-                return $value > 0;
+                return $value >= 0;
             }
         );
     }
@@ -56,7 +56,7 @@ class DoctrineCollectionsAssertsTest extends TestCase
 
         $collection = new ArrayCollection([0, 8, 5, 3]);
 
-        self::assertCollectionItemExistsThatSatisfiesPredicate(
+        self::assertWholeCollectionSatisfiesPredicate(
             $collection,
             function (int $key, int $value) {
                 return $key > 10 && $value > 0;
