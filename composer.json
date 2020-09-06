@@ -1,0 +1,33 @@
+{
+    "name": "raph007/phpunit-doctrine-collections-asserts",
+    "description": "PHPUnit asserts for Doctrine Collections",
+    "type": "library",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rafał Grzegorek",
+            "email": "grzegorek.rafal@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "doctrine/collections": "^1.6",
+        "phpunit/phpunit": "^9.3"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Raph\\PHPUnitExtensions\\DoctrineCollectionsAsserts\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.3.0"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
