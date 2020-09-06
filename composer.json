@@ -29,5 +29,8 @@
         },
         "optimize-autoloader": true,
         "sort-packages": true
+    },
+    "scripts": {
+        "phpcs": "phpcs --standard=PSR12 src tests"
     }
 }
